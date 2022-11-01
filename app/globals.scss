@@ -34,8 +34,29 @@ a {
   border-radius: 1rem;
   background: rgb(49, 49, 49);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  img{ 
+    width: 320px;
+    height: 320px;
+  }
 }
-.card , .card > img{ 
-  width: 320px;
-  height: 320px;
+
+.navbar{
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  background: rgb(49, 49, 49);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  li{
+    margin: 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+
+    // hover effect
+    &:hover{
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      border-bottom: 1px solid white;
+    }
+  }
 }

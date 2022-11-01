@@ -1,17 +1,16 @@
+import Link from "next/link";
 export const Navbar = () => {
   return (
-    <nav>
-      <ul>
+      <ul className="navbar">
         <li>
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
         </li>
         <li>
-          <a href="/blog">Blog</a>
+          <Link href="/blog">Blog</Link>
         </li>
         <li>
-          <a href="/about">About</a>
+          <Link href="/about">About</Link>
         </li>
       </ul>
-    </nav>
   );
 };
