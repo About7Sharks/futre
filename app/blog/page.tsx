@@ -7,7 +7,7 @@ export default function Blog() {
     <div className="journal">
       <h1>Journal</h1>
       {data?.map((post) => (
-        <Card {...post} />
+        <Card key={post.title} {...post} />
       ))}
     </div>
   );

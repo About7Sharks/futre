@@ -1,4 +1,3 @@
-// import {lazy} from 'react';
 export const config = {
   user: "About7Sharks",
   name: "Zachary Carlin",

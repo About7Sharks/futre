@@ -13,6 +13,6 @@ export interface PostData {
 
 export interface PostParams {
     params: {
-      post: string;
-    };
-  }
+        post: string;
+    }
+}

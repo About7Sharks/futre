@@ -11,7 +11,6 @@ export default function Post({ params: { post } }: PostParams) {
       repo: "Markdown",
     })
   );
-  console.log(data);
   return (
     <div className="blog">
       <h1>Post</h1>
