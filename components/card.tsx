@@ -1,18 +1,14 @@
+"use client";
+
 import { PostData } from "../types";
-import Link from 'next/link'
-import Image from "next/image";
-export const Card = ({
-  content,
-  data: { title, date, author, location, image, summary, tags },
-}: PostData) => {
+import { useRouter } from "next/navigation";
+
+export const Card = ({ data: { title, image, summary } }: PostData) => {
+  const router = useRouter();
   return (
-    <div className="card">
+    <div onClick={() => router.push("blog/" + title)} className="card">
+      <h3>{title}</h3>
       <img key={title} src={image} width={320} height={320} alt={summary} />
-      <h1>
-        {title} <span>Date: {date.toString()}</span>
-      </h1>
-      {/* <span>{tags}</span> */}
-      <Link href={"blog/"+title}>View</Link >
     </div>
   );
 };

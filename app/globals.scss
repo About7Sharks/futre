@@ -24,19 +24,36 @@ a {
     background: black;
   }
 }
+
+// journal content
+// grid layout 3 by x and responsive
+.journal .content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
 /* a nice card */
 .card{
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  background: rgb(49, 49, 49);
+  // align-items: center;
+  // padding: 1rem;
+  // border-radius: 1rem;
+  background: rgb(49, 49, 49,.75);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  h3{
+    position: absolute;
+    background-color: rgba(67, 67, 67, 0.655);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    padding: .75rem;
+    width: 100%;
+  }
   img{ 
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
   }
 }
 

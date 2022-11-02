@@ -6,9 +6,11 @@ export default function Blog() {
   return (
     <div className="journal">
       <h1>Journal</h1>
-      {data?.map((post) => (
-        <Card key={post.title} {...post} />
-      ))}
+      <div className="content">
+        {data?.map((post) => (
+          <Card key={post.title} {...post} />
+        ))}
+      </div>
     </div>
   );
 }

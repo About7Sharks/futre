@@ -41,11 +41,9 @@ export const getArticle = async ({
 // Parse the content of the markdown file
 // If blank skip; if in the skip array, skip it
 export const _cleanRepoData = async (data: any) => {
-  let files = data.tree;
-  let articles = files.filter((file: any) => file.path.includes(".md"));
   return (
     await Promise.all(
-      articles.map(async (article: any) => {
+      data.tree.filter((file: any) => file.path.includes(".md")).map(async (article: any) => {
         let { content } = await getArticle({ article: article.path });
         let _article = matter(content);
         if (Object.keys(_article.data).length === 0) return;
